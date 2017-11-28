@@ -49,6 +49,42 @@ Follow the same directions as for starting with the sample, but do the following
    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="1.0.0-beta" />
    ```
 
+## Visual Studio Code
+
+Visual Studio Code provides great local development experince for Durable Functions on Windows, Mac and Linux. Your functions can be run locally and can also be published to Azure. You can start with an empty project or with a set of sample functions.
+
+### Prerequisites
+
+* Install the [latest version of Visual Studio Code](https://code.visualstudio.com/Download)
+
+* Follow the instructions under "Install the Azure Functions Core Tools" in [Code and test Azure Functions locally](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local). 
+
+>[!IMPORTANT]  
+>If you already have the tools, please be sure to update them to the latest available version. Only after updating to Azure Functions Core Tools (2.0.1-beta.21) and Function Runtime Version 2.0.11370.0 we were able to run the sample successfully on Mac.  
+
+* On Windows install [Azure Storage Emulator](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-emulator), on Mac use storage account created on Azure 
+
+
+### Start with sample functions
+
+1. Download the [Sample App .zip file for Visual Studio](https://azure.github.io/azure-functions-durable-extension/files/VSDFSampleApp.zip). You don't need to add the NuGet reference because the sample project already has it.
+2. Install and run [Azure Storage Emulator](https://docs.microsoft.com/azure/storage/storage-use-emulator) version 5.2 or later. Alternatively, you can update the *local.appsettings.json* file with real Azure Storage connection strings.
+3. Open the project in Visual Studio 2017. 
+4. For instructions on how to run the sample, start with [Function chaining - Hello sequence sample](durable-functions-sequence.md). The sample can be run locally or published to Azure.
+
+### Start with an empty project
+ 
+Follow the same directions as for starting with the sample, but do the following steps instead of downloading the *.zip* file:
+
+1. Create a Function App project.
+2. Add the following NuGet package reference to your *.csproj* file:
+
+   ```xml
+   <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="1.0.0-beta" />
+   ```
+
+
+
 ## Azure portal
 
 If you prefer, you can use the Azure portal for Durable Functions development.
